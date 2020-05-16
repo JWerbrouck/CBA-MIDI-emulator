@@ -5,7 +5,7 @@ A hobby project made during the 2020 lockdown, the KeyboardCBA MIDI emulator tur
 * F1-F5 keys are used to play multiple octaves at the same time (cf. registers);
 * Stop the process by pressing "ESCAPE" before closing your terminal;
 * Numpad keys stay available, as well as keyboard shortcuts using the CTRL key;
-* You may need the [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) (Tobias Erichsen) application to open virtual MIDI ports on your computer (MS GS Wavetable Synth has too much latency);
+* You may need the [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) (Tobias Erichsen) application to open virtual MIDI ports on your computer (MS GS Wavetable Synth has too much latency to be of good use);
 * The default key mappings are based on a Belgian French (AZERTY) keyboard. You can make your own layout by copying and adapting one of the existing mapping files (e.g. do_1_AZERTY_w.json) into the desired layout.
 * This is a test version: bugs will be present. In rare cases notes may keep playing (e.g. changing octaves while a key is still pressed). All signals are killed when the 'END' button is pressed.
 
