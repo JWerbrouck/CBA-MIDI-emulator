@@ -2,6 +2,7 @@ import pythoncom, pyHook
 import json
 import rtmidi
 import os
+import sys
 
 noteLayouts = [pos_json for pos_json in os.listdir('.') if pos_json.endswith('.json')]
 midiout = rtmidi.MidiOut()
@@ -76,7 +77,7 @@ def OnKeyDown(event):
     if key == 'escape': 
         hm.UnhookKeyboard()
         allNotesOff()
-        exit()
+        sys.exit()
 
     # pass all keys in allowedKeys (they will be typed)    
     if key in allowedKeys:
