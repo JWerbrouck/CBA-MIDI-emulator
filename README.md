@@ -15,7 +15,6 @@ A ZIP folder is available in the [Releases](https://github.com/JWerbrouck/CBA-MI
 * This is a test version: bugs will be present. In rare cases notes may keep playing (e.g. changing octaves while a key is still pressed). All signals are killed when the 'END' button is pressed.
 
 WOW the threshold for learning accordion was never lower => everyone has a computer keyboard #everyoneAccordion  
-& You don't need to buy one of those €3000 MIDI accordions anymore! 
 
 ## Keyboards
 ### C on first row - AZERTY (Belgian)
