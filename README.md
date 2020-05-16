@@ -12,6 +12,16 @@ The KeyboardCBA MIDI emulator turns your computer keyboard into a chromatic butt
 WOW the threshold for learning accordion was never lower => everyone has a computer keyboard #everyoneAccordion  
 & You don't need to buy one of those €3000 MIDI accordions anymore! 
 
+## Keyboards
+### C on first row - AZERTY (Belgian)
+Only one keyboard has been mapped: C on the first row, mapped to an AZERTY keyboard. 
+* w = C
+* s = C#
+* e = D
+* ...
+
+You are welcome to submit your own mapping, so it can be offered as a choice.
+
 ## To do
 * Make a GUI
 * Add more MIDI features
