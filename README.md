@@ -1,8 +1,8 @@
 # CBA-MIDI-emulator
-A hobby project made during the 2020 lockdown, the KeyboardCBA MIDI emulator turns your computer keyboard into a chromatic button accordion, emitting MIDI events instead of keystrokes. You can use the output with any MIDI supporting software, such as music notation packages (Musescore) or DAWs.
+A hobby project made during the 2020 lockdown, the KeyboardCBA MIDI emulator turns your computer keyboard into a chromatic button accordion, emitting MIDI events instead of keystrokes (did you ever notice the similarities?). You can use the output with any MIDI supporting software, such as music notation packages (Musescore) or DAWs.
 
 ## Installation
-A ZIP folder is available in the [Releases](https://github.com/JWerbrouck/CBA-MIDI-emulator/releases) section. Just unzip it and run the CBAmidi.exe file. A terminal will open where user input can be given.
+A ZIP folder is available in the [Releases](https://github.com/JWerbrouck/CBA-MIDI-emulator/releases) section. Just unzip it and run the CBAmidi.exe file. A terminal will open where user input can be given. A UI might be added in the future.
 
 ## Usage
 * Toggle between MIDI and keyboard output using the "HOME" button;
@@ -18,13 +18,14 @@ WOW the threshold for learning accordion was never lower => everyone has a compu
 
 ## Keyboards
 ### C on first row - AZERTY (Belgian)
-Only one keyboard has been mapped: C on the first row, mapped to an AZERTY keyboard. 
+Only one keyboard has been mapped: C on the first row, mapped to an AZERTY keyboard. Start playing at the first row with characters (forget about the first row (ctrl, alt, space etc.)):
+
 * w = C
 * s = C#
 * e = D
 * ...
 
-You are welcome to submit your own mapping, so it can be offered as a choice.
+You are welcome to make your own mapping, so it can be offered as a choice to other users and integrated in a GUI.
 
 ## To do
 * Make a GUI
