@@ -14,7 +14,7 @@ A ZIP folder is available in the [Releases](https://github.com/JWerbrouck/CBA-MI
 * The default key mappings are based on a Belgian French (AZERTY) keyboard. You can make your own layout by copying and adapting one of the existing mapping files (e.g. do_1_AZERTY_w.json) into the desired layout.
 * This is a test version: bugs will be present. In rare cases notes may keep playing (e.g. changing octaves while a key is still pressed). All signals are killed when the 'END' button is pressed.
 
-WOW the threshold for learning accordion was never lower => everyone has a computer keyboard #everyoneAccordion  
+WOW the threshold for learning accordion was never lower #everyoneAccordion  
 
 ## Keyboards
 ### C on first row - AZERTY (Belgian)
