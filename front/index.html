@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keyboard</title>
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/colors.css">
+    <link rel= "stylesheet" type= "text/css" href= "stylesheets/main.css">
+</head>
+
+<body class="default">
+    <!-- <div class="infoContainer">
+        <p class="info title">INFO</p>
+        <p class="info">MIDI</p>
+        <p class="info">REGISTERS</p>
+        <p class="info">OCTAVE</p>
+        <p class="info">KEYBOARD</p>
+        <p class="info">CHANNEL</p>
+    </div> -->
+    <div class="infoContainer">
+        <p class="info">Turn your keyboard into a chromatic button accordion MIDI device!</p>
+        <p class="info">Code coming soon (Github) (stay tuned!)</p>
+    </div>
+    <div>
+        <div class="keyboard-case defaultCase">
+            <div class="keyboard">
+                <div class="key-row">
+                    <div class="key default1 _1-60u smallFont neutral">
+                        <p class="primary" id="tab"></p>
+                        <p hidden></p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special">A</p>
+                        <p class="primary" id="a">G#/Ab</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="z">Z</p>
+                        <p class="primary" id="z">B</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="e">E</p>
+                        <p class="primary" id="e">D</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="r">R</p>
+                        <p class="primary" id="r">F</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="t">T</p>
+                        <p class="primary" id="t">G#/Ab</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="y">Y</p>
+                        <p class="primary" id="y">H</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="u">U</p>
+                        <p class="primary" id="u">D</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="i">I</p>
+                        <p class="primary" id="i">F</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="o">O</p>
+                        <p class="primary" id="o">G#/Ab</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="p">P</p>
+                        <p class="primary" id="p">B</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">¨ ^</p>
+                        <p class="primary" id="oem_6">D</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">* $</p>
+                        <p class="primary" id="oem_1">F</p>
+                    </div>
+                    <div class="key default1 _1-5u smallFont not">
+                        <p class="primary" id="return_1"></p>
+                    </div>
+                </div>
+                <div class="key-row">
+                    <div class="key default1 _1-75u smallFont neutral">
+                        <p class="primary" id="capital"></p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="q">Q</p>
+                        <p class="primary" id="q">A#/Bb</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="s">S</p>
+                        <p class="primary" id="s">C#/Db</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="d">D</p>
+                        <p class="primary" id="d">E</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="f">F</p>
+                        <p class="primary" id="f">G</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="g">G</p>
+                        <p class="primary" id="g">A#/Bb</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="h">H</p>
+                        <p class="primary" id="h">C#/Db</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="j">J</p>
+                        <p class="primary" id="j">E</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="k">K</p>
+                        <p class="primary" id="k">G</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="l">L</p>
+                        <p class="primary" id="l">A#/Bb</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="m">M</p>
+                        <p class="primary" id="m">C#/Db</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">% ù</p>
+                        <p class="primary" id="oem_3">E</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">£ µ</p>
+                        <p class="primary" id="oem_5">G</p>
+                    </div>
+                    <div class="key default1 _1-25u smallFont black">
+                        <p class="special" id="return">return</p>
+                        <p class="primary" id="return">(A#/Bb)</p>
+                    </div>
+                </div>
+                <div class="key-row">
+                    <div class="key default1 _1-25u smallFont neutral">
+                        <p class="primary" id="lshift"></p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="oem_102">< ></p>
+                        <p class="primary" id="oem_102">A</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="w">W</p>
+                        <p class="primary" id="w">C</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="x">X</p>
+                        <p class="primary" id="x">D#/Eb</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="c">C</p>
+                        <p class="primary" id="c">F#/Gb</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="v">V</p>
+                        <p class="primary" id="v">A</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special" id="b">B</p>
+                        <p class="primary" id="b">C</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special" id="n">N</p>
+                        <p class="primary" id="n">D#/Eb</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special">, ?</p>
+                        <p class="primary" id="oem_comma">F#/Gb</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">. ;</p>
+                        <p class="primary" id="oem_period">A</p>
+                    </div>
+                    <div class="key default1 smallFont white">
+                        <p class="special">/ :</p>
+                        <p class="primary" id="oem_2">C</p>
+                    </div>
+                    <div class="key default1 smallFont black">
+                        <p class="special">+ =</p>
+                        <p class="primary" id="oem_plus">D#/Eb</p>
+                    </div>
+                    <div class="key default1 _2-75u smallFont neutral">
+                        <p class="special" id="rshift">SHIFT</p>
+                        <p class="primary" id="rshift">(A)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webmidi"></script>
+    <script type="text/javascript" src="do_1_AZERTY_inverse.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+</body>
+
+</html>

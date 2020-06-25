@@ -43,7 +43,6 @@ while True:
             print("Invalid input. Please enter a number between 1 and", len(noteLayouts), ':\n')
         else:
             notes = json.load(open(noteLayouts[int(layout)-1]))
-            print('starting...')
             break
     else: 
         notes = json.load(open(noteLayouts[0]))
@@ -60,6 +59,15 @@ allowedKeys = ['back', 'numpad0','numpad1', 'numpad2', 'numpad3', 'numpad4', 'nu
 octave = 0
 registers = 5
 control = False
+
+def setSysex(key, state):
+    sysex = bytearray()
+    sysex.extend(map(ord, key))
+    sysex = list(sysex)     
+    sysex.insert(0, 0xF0)      
+    sysex.append(state)      
+    sysex.append(0xF7)
+    return sysex
 
 def OnKeyDown(event):
     global midi, octave, registers, sustainedNotes, sustaining, control
@@ -97,6 +105,9 @@ def OnKeyDown(event):
             return True
         # play the note, keeping the current octave and the registers (i) in mind
         if key in notes and key not in currentNotes:
+            sysex = setSysex(key, 1)
+            midiout.send_message(sysex)
+            
             for i in range(0, registers):
                 noteDecimal = notes[key]["val"] + 12*octave + 12*i
                 note_on = [0x90, noteDecimal, 60]
@@ -137,6 +148,8 @@ def OnKeyUp(event):
             if sustaining == True:
                 pass
             else:
+                sysex = setSysex(key, 0)
+                midiout.send_message(sysex)
                 for i in range(0, registers):
                     noteDecimal = notes[key]["val"] + 12*octave + 12*i
                     note_off = [0x80, noteDecimal, 60]
@@ -170,6 +183,5 @@ hm = pyHook.HookManager()
 hm.KeyDown = OnKeyDown
 hm.KeyUp = OnKeyUp
 hm.HookKeyboard()
-print('Midi on')
-
+print("Midi on")
 pythoncom.PumpMessages()
