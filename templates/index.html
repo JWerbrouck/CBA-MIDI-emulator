@@ -5,6 +5,9 @@
     <title>Keyboard</title>
     <link rel= "stylesheet" type= "text/css" href= "stylesheets/colors.css">
     <link rel= "stylesheet" type= "text/css" href= "stylesheets/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.4.9/Tone.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webmidi"></script>
 </head>
 
 <body class="default">
@@ -18,7 +21,7 @@
     </div> -->
     <div class="infoContainer">
         <p class="info">Turn your keyboard into a chromatic button accordion MIDI device!</p>
-        <p class="info">Code coming soon (Github) (stay tuned!)</p>
+        <p class="info" id="registers">Parallel octaves: 5</p>
     </div>
     <div>
         <div class="keyboard-case defaultCase">
@@ -142,7 +145,7 @@
                         <p class="primary" id="lshift"></p>
                     </div>
                     <div class="key default1 smallFont white">
-                        <p class="special" id="oem_102">< ></p>
+                        <p class="special" id="oem_102">> <</p>
                         <p class="primary" id="oem_102">A</p>
                     </div>
                     <div class="key default1 smallFont white">
@@ -193,10 +196,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/webmidi"></script>
-    <script type="text/javascript" src="do_1_AZERTY_inverse.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
 </body>
 

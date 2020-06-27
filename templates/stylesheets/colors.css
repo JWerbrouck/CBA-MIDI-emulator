@@ -16,12 +16,12 @@
 }
 
 .white {
-	color: #000;
+	color: rgb(189, 189, 189);
 	background-color: #fff;
 }
 
 .black {
-	color: #fff;
+	color: rgb(104, 104, 104);
 	background-color: #000;
 }
 

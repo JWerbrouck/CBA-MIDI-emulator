@@ -60,14 +60,15 @@ octave = 0
 registers = 5
 control = False
 
-def setSysex(key, state):
+def sendSysex(message, state):
     sysex = bytearray()
-    sysex.extend(map(ord, key))
+    sysex.extend(map(ord, message))
     sysex = list(sysex)     
     sysex.insert(0, 0xF0)      
     sysex.append(state)      
     sysex.append(0xF7)
-    return sysex
+    midiout.send_message(sysex)
+    return
 
 def OnKeyDown(event):
     global midi, octave, registers, sustainedNotes, sustaining, control
@@ -105,8 +106,7 @@ def OnKeyDown(event):
             return True
         # play the note, keeping the current octave and the registers (i) in mind
         if key in notes and key not in currentNotes:
-            sysex = setSysex(key, 1)
-            midiout.send_message(sysex)
+            sysex = sendSysex(key, 1)
             
             for i in range(0, registers):
                 noteDecimal = notes[key]["val"] + 12*octave + 12*i
@@ -120,17 +120,19 @@ def OnKeyDown(event):
         # regulate the registers with the f keys (1 to 5)
         if key in ['f1', 'f2', 'f3', 'f4', 'f5']:
             registers = int(key[-1])
-            print('Register octaves changed to', key[-1])
-
+            sendSysex(key[-1], 2)
+            print('Register changed to', key[-1])
 
         # raise the octave by pushing the 'up' arrow key
         elif key == 'up' and octave < 5:
             octave = octave + 1
+            sendSysex(octave, 3)
             print('Set to higher octave')
 
         # lower the octave by pushing the 'down' arrow key
         elif key == 'down' and octave > -2:
             octave = octave - 1
+            sendSysex(octave, 3)
             print('Set to lower octave')
         return False
     else:
@@ -148,8 +150,7 @@ def OnKeyUp(event):
             if sustaining == True:
                 pass
             else:
-                sysex = setSysex(key, 0)
-                midiout.send_message(sysex)
+                sysex = sendSysex(key, 0)
                 for i in range(0, registers):
                     noteDecimal = notes[key]["val"] + 12*octave + 12*i
                     note_off = [0x80, noteDecimal, 60]
@@ -177,7 +178,6 @@ def allNotesOff():
     for i in range(0,127):
         note_off = [0x80, i, 127]
         midiout.send_message(note_off)
-
 
 hm = pyHook.HookManager()
 hm.KeyDown = OnKeyDown
