@@ -388,7 +388,7 @@ function MidiListener() {
 
 	function setRegisters(register) {
 		console.log('register changed to ', register)
-		document.getElementById('registers').innerHTML = `Parallel octaves: ${register}`
+		// document.getElementById('registers').innerHTML = `Parallel octaves: ${register}`
 	}
 
 	function setOctaves(octave) {

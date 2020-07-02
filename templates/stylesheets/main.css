@@ -113,6 +113,12 @@ select {
 	text-transform: uppercase;
 }
 
+.git {
+	color: white;
+	font-family: "Helvetica", "sans-serif";
+	font-size: 15px;
+}
+
 .title {
 	font-size: 15px;
 }
