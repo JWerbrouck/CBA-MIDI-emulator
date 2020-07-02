@@ -1,6 +1,8 @@
 # CBA-MIDI-emulator
 A hobby project made during the (first?) 2020 lockdown, the KeyboardCBA MIDI emulator turns your computer keyboard into a chromatic button accordion, emitting MIDI events instead of keystrokes (did you ever notice the similarities?). You can use the output with any MIDI supporting software, such as music notation packages (Musescore) or DAWs. 
 
+![keyboard](https://raw.githubusercontent.com/jwerbrouck/cba-midi-emulator/master/midi_keyboard.png)
+
 ## Installation
 A ZIP folder is available in the [Releases](https://github.com/JWerbrouck/CBA-MIDI-emulator/releases) section. Just unzip it and run the CBAmidi.exe file. A terminal will open where user input can be given. A UI might be added in the future, an index.html document that mirrors the input is available in the 'templates' folder, but it's  not in the release yet. The HTML document should be opened in Chrome, since that is currently the only browser supporting the web MIDI spec.
 
