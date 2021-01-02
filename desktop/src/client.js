@@ -8,7 +8,7 @@ const functionMapping = require('./mappings/functionMapping')
 global.output = new midi.Output();
 global.registers = 1
 global.octave = 0
-global.velocity = 50;
+global.velocity = 60;
 global.channels = [1]
 
 // compile the main dictionary
@@ -19,7 +19,7 @@ const mapping = {};
       mapping[keyCode] = {value: noteMapping[value.azerty[0]].dec, type: "note", key: value.azerty[0]}
     }
     if (Object.keys(functionMapping).includes(value.azerty[0])) {
-      mapping[keyCode] = {value: functionMapping[value.azerty[0]], type: "function", key: value.azerty[0]}
+      mapping[keyCode] = {value: functionMapping[value.azerty[0]].task, type: "function", arguments: functionMapping[value.azerty[0]].arguments, key: value.azerty[0]}
     }
   }
 })();
@@ -86,6 +86,7 @@ function openMidiPort() {
     });
   }
   console.log(`Lowest C is C${octave+2}`)
+  console.log(`Velocity is ${velocity}`)
 }
 
 function handleKeyPress(data) {
@@ -113,7 +114,7 @@ function handleKeyPress(data) {
           })
         }
       } else if (mapping[data.keyCode].type === "function" && data.type === "keypress") {
-        mapping[data.keyCode].value()
+        mapping[data.keyCode].value(mapping[data.keyCode].arguments)
       }
 
     } else {
