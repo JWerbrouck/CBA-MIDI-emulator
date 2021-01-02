@@ -20,6 +20,9 @@ const mapping = {};
     }
     if (Object.keys(functionMapping).includes(value.azerty[0])) {
       mapping[keyCode] = {value: functionMapping[value.azerty[0]].task, type: "function", arguments: functionMapping[value.azerty[0]].arguments, key: value.azerty[0]}
+      if (functionMapping[value.azerty[0]].toggle) {
+        mapping[keyCode].toggle = true
+      }
     }
   }
 })();
@@ -113,8 +116,10 @@ function handleKeyPress(data) {
             }
           })
         }
-      } else if (mapping[data.keyCode].type === "function" && data.type === "keypress") {
-        mapping[data.keyCode].value(mapping[data.keyCode].arguments)
+      } else if (mapping[data.keyCode].type === "function") {
+        if ((data.type === "keypress") || (data.type === "keyup" && mapping[data.keyCode].toggle)) {
+          mapping[data.keyCode].value(mapping[data.keyCode].arguments)
+        }
       }
 
     } else {

@@ -26,14 +26,9 @@ function velocityLower () {
     console.log(`Changed velocity to ${velocity}`)
 }
 
-
 function setRegister(newReg) {
     registers = newReg
     console.log(`Registers active: ${newReg}`)
-}
-
-function allNotesOff() {
-    
 }
 
 module.exports = {
@@ -41,5 +36,5 @@ module.exports = {
     octaveLower,
     setRegister,
     velocityLower,
-    velocityHigher
+    velocityHigher,
 }
