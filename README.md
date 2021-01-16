@@ -1,3 +1,5 @@
+# EDIT: DO NOT USE THIS PROGRAM - causes errors within your computer keyboard handling
+
 # CBA-MIDI-emulator
 A hobby project made during the (first?) 2020 lockdown, the KeyboardCBA MIDI emulator turns your computer keyboard into a chromatic button accordion, emitting MIDI events instead of keystrokes (did you ever notice the similarities?). You can use the output with any MIDI supporting software, such as music notation packages (Musescore) or DAWs. 
 
